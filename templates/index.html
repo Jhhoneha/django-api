@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    {%  csrf_token %}
+    <input type="submit" value="上传">
+
+</form>
+</body>
+</html>
